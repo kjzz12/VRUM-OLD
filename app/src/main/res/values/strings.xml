@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VRUM</string>
+    <string name="vin_entry">ENTER YOUR VIN #</string>
+    <string name="button_enter">Enter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_vehicle_info">Vehicle Information</string>
+    <string name="hello_world">Hello world!</string>
+</resources>
