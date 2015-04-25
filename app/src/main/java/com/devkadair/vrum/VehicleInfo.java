@@ -1,28 +1,33 @@
-package devkadair.vrum;
+package com.devkadair.vrum;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class VinEntry extends ActionBarActivity {
-    public final static String EXTRA_VIN = "devkadair.vrum.VIN";
+public class VehicleInfo extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vin_entry);
+        Intent intent = getIntent();
+        String vin = intent.getStringExtra(com.devkadair.vrum.VinEntry.EXTRA_VIN);
+
+        TextView textView = new TextView(this);
+        textView.setTextSize(40);
+        textView.setText(vin);
+
+        setContentView(textView);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_vin_entry, menu);
+        getMenuInflater().inflate(com.devkadair.vrum.R.menu.menu_vehicle_info, menu);
         return true;
     }
 
@@ -34,18 +39,10 @@ public class VinEntry extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == com.devkadair.vrum.R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-    public void CopyVIN(View view){
-        Intent intent = new Intent(this, VehicleInfo.class);
-        EditText editText = (EditText) findViewById(R.id.vin_entry);
-        String vin = editText.getText().toString();
-        intent.putExtra(EXTRA_VIN, vin);
-        startActivity(intent);
-
     }
 }

@@ -1,4 +1,4 @@
-package devkadair.vrum;
+package com.devkadair.vrum;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

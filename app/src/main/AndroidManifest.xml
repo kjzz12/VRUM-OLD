@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="devkadair.vrum" >
+    package="com.devkadair.vrum" >
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,7 @@
             android:parentActivityName=".VinEntry" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="devkadair.vrum.VinEntry" />
+                android:value="com.devkadair.vrum.VinEntry" />
         </activity>
     </application>
 
